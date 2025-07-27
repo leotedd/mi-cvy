@@ -1,13 +1,22 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
 import './App.css';
+import teddy from './assets/teddy.jpg';
+import cv from './assets/CV-Teddy-Hernandez.pdf'; // ✅ Importamos el PDF
 
 const App: React.FC = () => {
   return (
     <div className="container">
       <header className="header">
+        <img src={teddy} alt="Foto de Teddy" className="profile-pic" />
         <h1>Teddy Leonardo Hernández Pérez</h1>
-        <p className="subtitle">Desarrollador Web en formación | Apasionado por la tecnología y la electricidad</p>
+        <p className="subtitle">
+          Desarrollador Web en formación | Apasionado por la tecnología y la electricidad
+        </p>
+        {/* ✅ Botón para descargar CV */}
+        <a href={cv} download className="btn-download">
+          <FaDownload /> Descargar CV
+        </a>
       </header>
 
       <section className="info">
@@ -21,8 +30,8 @@ const App: React.FC = () => {
       <section className="perfil">
         <h2>Perfil</h2>
         <p>
-          Soy un desarrollador en formación apasionado por React, bases de datos y electricidad. 
-          Actualmente estudiante activo de Ingeniería en Sistemas, con interés en la tecnología, 
+          Soy un desarrollador en formación apasionado por React, bases de datos y electricidad.
+          Actualmente soy estudiante activo de Ingeniería en Sistemas, con interés en la tecnología,
           innovación y proyectos que integren software y hardware.
         </p>
       </section>
@@ -52,10 +61,10 @@ const App: React.FC = () => {
       <section className="redes">
         <h2>Redes Sociales</h2>
         <div className="icons">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/leotedd" target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} />
           </a>
         </div>
